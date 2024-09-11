@@ -1,13 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AppLayout from "./UI/AppLayout";
 
 function App() {
   return (
-    <BrowserRouter basename="/admin">
-      <Routes>
-        <Route path="/" element={<div>Home</div>}/>
-        <Route path="/login" element={<div>login</div>}/>
-      </Routes>
-    </BrowserRouter>
+    <AppLayout>
+      <div>Ahmed</div>
+    </AppLayout>
   );
 }
 
