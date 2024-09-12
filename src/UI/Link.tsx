@@ -36,15 +36,17 @@ const Link = styled.a<LinkProps>`
 
   color: ${(props) => (props.active ? "#51FFA9" : "white")};
 
+  transition: all 1s linear;
+
   & > span {
     display: block;
     cursor: pointer;
-    transition: all 0.5s linear;
+    transition: all 1s linear;
   }
 
   &:hover {
     span {
-      animation: ${flipText} 0.5s linear 0s 1 alternate both;
+      animation: ${flipText} 0.2s linear 0s 1 alternate both;
     }
   }
 `;

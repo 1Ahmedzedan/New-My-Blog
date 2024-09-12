@@ -5,6 +5,8 @@ import { useState } from "react";
 const NavBar = () => {
   const Container = styled.div`
     position: fixed;
+    top: 50px; 
+    left: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;

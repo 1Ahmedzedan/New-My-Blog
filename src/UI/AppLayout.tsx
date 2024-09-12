@@ -26,7 +26,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     position: relative;
     background: #171c22;
     height: 100vh;
-    padding: 50px;
+    padding: 150px 50px;
+
+    display: flex;
+    justify-content: flex-end;
 
     & > img {
       position: fixed;
