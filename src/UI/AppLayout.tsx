@@ -7,7 +7,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const AppLayout: React.FC<Props> = () => {
+const AppLayout: React.FC<Props> = ({ children }) => {
   const rotate = keyframes`
         0% {
             transform: rotate(0deg);
@@ -23,8 +23,11 @@ const AppLayout: React.FC<Props> = () => {
         }
     `;
   const Container = styled.div`
+    position: relative;
     background: #171c22;
     height: 100vh;
+    padding: 50px;
+
     & > img {
       position: fixed;
       animation: ${rotate} 8s linear 0s infinite alternate both;
@@ -143,6 +146,7 @@ const AppLayout: React.FC<Props> = () => {
       <Image src={element1} alt="icon" />
       <Image src={element2} alt="icon" />
       <Image src={element1} alt="icon" />
+      {children}
     </Container>
   );
 };

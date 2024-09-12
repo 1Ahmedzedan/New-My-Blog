@@ -1,9 +1,10 @@
+import NavBar from "./components/NavBar";
 import AppLayout from "./UI/AppLayout";
 
 function App() {
   return (
     <AppLayout>
-      <div>Ahmed</div>
+      <NavBar />
     </AppLayout>
   );
 }
