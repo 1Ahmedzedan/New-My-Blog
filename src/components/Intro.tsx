@@ -4,6 +4,7 @@ import AnimateCursorText from "../UI/AnimateCursorText";
 
 const Intro = () => {
   const Container = styled.div`
+    padding: 60px 0px;
     position: relative;
     display: flex;
     gap: 60px;

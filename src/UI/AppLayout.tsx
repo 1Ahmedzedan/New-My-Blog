@@ -25,8 +25,8 @@ const AppLayout: React.FC<Props> = ({ children }) => {
   const Container = styled.div`
     position: relative;
     background: #171c22;
-    height: 100vh;
-    padding: 150px 50px;
+    min-height: 100vh;
+    padding: 100px 50px;
 
     display: flex;
     justify-content: flex-end;

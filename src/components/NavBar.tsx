@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import Link from "../UI/Link";
-import { useState } from "react";
+import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
 const NavBar = () => {
   const Container = styled.div`
     position: fixed;
-    top: 50px; 
+    top: 50px;
     left: 50px;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,10 @@ const NavBar = () => {
     border-radius: 25px;
   `;
 
-  const [activeLink, setActiveLink] = useState("intro");
+  const [activeLink, setActiveLink] = useLocalStorageState(
+    "intro",
+    "activeLink"
+  );
 
   return (
     <Container>
@@ -49,36 +52,42 @@ const NavBar = () => {
       <NavBarContainer>
         <Link
           active={activeLink === "intro"}
+          href="#intro"
           onClick={() => setActiveLink("intro")}
         >
           <span>Intro</span>
         </Link>
         <Link
           active={activeLink === "eduction"}
+          href="#eduction"
           onClick={() => setActiveLink("eduction")}
         >
           <span>Eduction</span>
         </Link>
         <Link
           active={activeLink === "skills"}
+          href="#skills"
           onClick={() => setActiveLink("skills")}
         >
           <span>Skills</span>
         </Link>
         <Link
           active={activeLink === "projects"}
+          href="#projects"
           onClick={() => setActiveLink("projects")}
         >
           <span>Projects</span>
         </Link>
         <Link
           active={activeLink === "awards"}
+          href="#awards"
           onClick={() => setActiveLink("awards")}
         >
           <span>Awards</span>
         </Link>
         <Link
           active={activeLink === "contact"}
+          href="#contact"
           onClick={() => setActiveLink("contact")}
         >
           <span>Contact Me</span>
