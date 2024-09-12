@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "../UI/Link";
+import { useState } from "react";
 
 const NavBar = () => {
   const Container = styled.div`
@@ -38,26 +39,46 @@ const NavBar = () => {
     border-radius: 25px;
   `;
 
+  const [activeLink, setActiveLink] = useState("intro");
+
   return (
     <Container>
       <Name>Ahmed Zedan</Name>
       <NavBarContainer>
-        <Link>
+        <Link
+          active={activeLink === "intro"}
+          onClick={() => setActiveLink("intro")}
+        >
           <span>Intro</span>
         </Link>
-        <Link>
+        <Link
+          active={activeLink === "eduction"}
+          onClick={() => setActiveLink("eduction")}
+        >
           <span>Eduction</span>
         </Link>
-        <Link>
+        <Link
+          active={activeLink === "skills"}
+          onClick={() => setActiveLink("skills")}
+        >
           <span>Skills</span>
         </Link>
-        <Link>
+        <Link
+          active={activeLink === "projects"}
+          onClick={() => setActiveLink("projects")}
+        >
           <span>Projects</span>
         </Link>
-        <Link>
+        <Link
+          active={activeLink === "awards"}
+          onClick={() => setActiveLink("awards")}
+        >
           <span>Awards</span>
         </Link>
-        <Link>
+        <Link
+          active={activeLink === "contact"}
+          onClick={() => setActiveLink("contact")}
+        >
           <span>Contact Me</span>
         </Link>
       </NavBarContainer>

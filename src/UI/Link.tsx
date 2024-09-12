@@ -22,7 +22,11 @@ const flipText = keyframes`
   }
 `;
 
-const Link = styled.a`
+interface LinkProps {
+  active?: boolean;
+}
+
+const Link = styled.a<LinkProps>`
   position: relative;
   width: fit-content;
   cursor: pointer;
@@ -30,9 +34,12 @@ const Link = styled.a`
   height: 20px;
   overflow: hidden;
 
+  color: ${(props) => (props.active ? "#51FFA9" : "white")};
+
   & > span {
     display: block;
     cursor: pointer;
+    transition: all 0.5s linear;
   }
 
   &:hover {
