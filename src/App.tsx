@@ -11,7 +11,9 @@ import ContactContainer from "./UI/ContactContainer";
 function App() {
   return (
     <AppLayout>
+      
       <NavBar />
+
       <ContactContainer>
         <Intro />
         <Education />
@@ -20,6 +22,7 @@ function App() {
         <Awards />
         <Contact />
       </ContactContainer>
+
     </AppLayout>
   );
 }
