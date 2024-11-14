@@ -1,6 +1,5 @@
 import Awards from "./components/Awards";
 import Contact from "./components/Contact";
-import Education from "./components/Education";
 import Intro from "./components/Intro";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
@@ -16,7 +15,6 @@ function App() {
 
       <ContactContainer>
         <Intro />
-        <Education />
         <Skills />
         <Projects />
         <Awards />

@@ -56,13 +56,6 @@ const NavBar = () => {
           <span>Intro</span>
         </Link>
         <Link
-          active={activeLink === "eduction"}
-          href="#eduction"
-          onClick={() => setActiveLink("eduction")}
-        >
-          <span>Eduction</span>
-        </Link>
-        <Link
           active={activeLink === "skills"}
           href="#skills"
           onClick={() => setActiveLink("skills")}
