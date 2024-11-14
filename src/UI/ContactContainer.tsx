@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 const ContactContainer = styled.div`
-  width: 75%;
+  width: 80%;
   height: fit-content;
 
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 150px;
 `;
 
 export default ContactContainer;

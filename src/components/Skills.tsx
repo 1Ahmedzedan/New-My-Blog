@@ -3,6 +3,7 @@ import SkillsContainer from "../UI/SkillsContainer";
 import { skills } from "../utils/data";
 const Skills = () => {
   const Container = styled.div`
+    padding: 100px 0px;
     color: white;
     position: relative;
     display: flex;

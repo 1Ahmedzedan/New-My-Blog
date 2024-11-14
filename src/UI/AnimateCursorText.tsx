@@ -25,7 +25,7 @@ const typing = keyframes`
 `;
 
 const AnimateCursorText = styled.p`
-  font-size: 26px;
+  font-size: 40px;
   color: #51ffa9;
   font-family: "Dela Gothic One", sans-serif;
   border-right: 2px solid white;

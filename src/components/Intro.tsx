@@ -1,10 +1,16 @@
 import styled from "styled-components";
 import myPhoto from "../assets/myPhoto.png";
 import AnimateCursorText from "../UI/AnimateCursorText";
+import { SiSitepoint } from "react-icons/si";
+import Linkedin from "../assets/linkedinLogo.png";
+import Gmail from "../assets/GmailLogo.png";
+import WhatsApp from "../assets/whatsAppIcon.png";
+import Github from "../assets/githubIcons.png";
+import Facebook from "../assets/facebookIcon.png";
 
 const Intro = () => {
   const Container = styled.div`
-    padding: 60px 0px;
+    padding: 100px 0px;
     position: relative;
     display: flex;
     gap: 60px;
@@ -30,12 +36,43 @@ const Intro = () => {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px ; 
+    gap: 40px;
   `;
 
   const Text = styled.p`
-    font-size: 22px;
+    font-size: 24px;
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & > svg {
+      color: #51ffa9;
+    }
+  `;
+
+  const SocialMedia = styled.div`
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 40px;
+
+    align-self: center;
+
+    & > a {
+      width: fit-content;
+      transition: all 300ms linear;
+    }
+
+    & > a:hover {
+      scale: 130%;
+      opacity: 0.5;
+    }
+  `;
+
+  const SocialIcon = styled.img`
+    width: 60px;
+    height: 60px;
   `;
 
   return (
@@ -45,9 +82,47 @@ const Intro = () => {
       </ImageContainer>
       <Content>
         <AnimateCursorText>Welcome, I am Ahmed Zedan</AnimateCursorText>
-        <Text>Senior CS Student In FCI</Text>
-        <Text>Software Engineer</Text>
-        <Text>Competitive Programmer</Text>
+        <div>
+          <Text>
+            <SiSitepoint />
+            Senior CS Student In FCI
+          </Text>
+          <Text>
+            <SiSitepoint />
+            Software Engineer
+          </Text>
+          <Text>
+            <SiSitepoint />
+            Front-End Devloper
+          </Text>
+          <Text>
+            <SiSitepoint />
+            Competitive Programmer
+          </Text>
+        </div>
+        <SocialMedia>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/ahmed-zedan-04589624a/"
+          >
+            <SocialIcon src={Linkedin} alt="linkedin" />
+          </a>
+          <a target="_blank" href="mailto:a7mdzedan199@gmail.com">
+            <SocialIcon src={Gmail} alt="gmail" />
+          </a>
+          <a target="_blank" href="https://wa.me/01556188801">
+            <SocialIcon src={WhatsApp} alt="whatsApp" />
+          </a>
+          <a target="_blank" href="https://github.com/1Ahmedzedan">
+            <SocialIcon src={Github} alt="github" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=100013486804562"
+          >
+            <SocialIcon src={Facebook} alt="facebook" />
+          </a>
+        </SocialMedia>
       </Content>
     </Container>
   );
