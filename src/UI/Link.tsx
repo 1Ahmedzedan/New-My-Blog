@@ -27,6 +27,7 @@ interface LinkProps {
 }
 
 const Link = styled.a<LinkProps>`
+  line-height: 1;
   position: relative;
   width: fit-content;
   cursor: pointer;
@@ -35,7 +36,6 @@ const Link = styled.a<LinkProps>`
   overflow: hidden;
 
   color: ${(props) => (props.active ? "#51FFA9" : "white")};
-
 
   & > span {
     display: block;

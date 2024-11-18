@@ -119,6 +119,7 @@ button:has(svg) {
 a {
   color: inherit;
   text-decoration: none;
+  line-height: 0;
 }
 
 ul {

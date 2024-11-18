@@ -37,7 +37,7 @@ const SkillCard = ({ title, percentage }: ComponentProps) => {
     justify-content: center;
     align-items: center;
     border: white solid 3px;
-    box-shadow: 0 0 20px 3px black;
+    box-shadow: 0 0 8px 1px white;
     position: relative;
     & > div {
       background: #171c22;
