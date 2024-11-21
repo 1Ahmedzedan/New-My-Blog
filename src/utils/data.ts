@@ -1,4 +1,4 @@
-import { Skills } from "./interfaces";
+import { Project, Skills } from "./interfaces";
 
 export const skills: Skills = {
   programmingLanguage: {
@@ -159,3 +159,19 @@ export const skills: Skills = {
     ],
   },
 };
+
+export const projects: Project[] = [
+  {
+    title: "Cloud Tracker",
+    description:
+      "Awebappto track & visualize AWS resource usage, obtaining data by assuming IAM Roles and other methods.",
+    repoLink: "https://github.com/1Ahmedzedan/Cloud-Tracker-Frontend",
+  },
+  {
+    title: " AWS EC2 Products Explorer ",
+    description:
+      "React application to explore and compare pricing for AWS Cloud EC2 compute instances and  Real time and interactive visualization with rich filtration options.",
+    repoLink: "https://github.com/1Ahmedzedan/aws-instances-ec2",
+    demoLink: "https://1ahmedzedan.github.io/aws-instances-ec2/",
+  },
+];

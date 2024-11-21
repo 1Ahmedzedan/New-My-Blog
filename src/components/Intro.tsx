@@ -81,7 +81,14 @@ const Intro = () => {
         <MyImage src={myPhoto} alt="myPhoto" />
       </ImageContainer>
       <Content>
-        <AnimateCursorText>Welcome, I am Ahmed Zedan</AnimateCursorText>
+        <div style={{ width: "fit-content" }}>
+          <AnimateCursorText duration={2} cursor={false} delay={0}>
+            Welcome,
+          </AnimateCursorText>
+        </div>
+        <AnimateCursorText duration={3} cursor={true} delay={2}>
+          I am Ahmed Zedan
+        </AnimateCursorText>
         <div>
           <Text>
             <SiSitepoint />

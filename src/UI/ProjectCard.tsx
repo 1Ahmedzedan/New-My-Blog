@@ -2,10 +2,17 @@ import { BiSolidShow } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import styled from "styled-components";
 
-const ProjectCard = () => {
+interface Props {
+  title: string;
+  description: string;
+  repoLink: string | undefined;
+  demoLink: string | undefined;
+}
+
+const ProjectCard = ({ title, description, repoLink, demoLink }: Props) => {
   const ProjectCard = styled.div`
     background-color: white;
-    width: 350px;
+    width: 90%;
     height: 500px;
     border-radius: 25px;
     overflow: hidden;
@@ -31,9 +38,11 @@ const ProjectCard = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
+    font-size: 22px;
+    text-align: center;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 10;
   `;
 
   const Description = styled.div`
@@ -67,22 +76,19 @@ const ProjectCard = () => {
 
   return (
     <ProjectCard>
-      <Title>Title</Title>
-      <Description>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas,
-        placeat ullam quibusdam, nisi dicta eveniet rerum praesentium magni esse
-        qui obcaecati consectetur est facere et velit aliquid sequi laborum!
-      </Description>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
       <Buttons>
-        <a
-          href="https://react-icons.github.io/react-icons/search/#q=shows"
-          target="_blank"
-        >
-          <FaGithub />
-        </a>
-        <a href="" target="_blank">
-          <BiSolidShow />
-        </a>
+        {repoLink && (
+          <a href={repoLink} target="_blank">
+            <FaGithub />
+          </a>
+        )}
+        {demoLink && (
+          <a href={demoLink} target="_blank">
+            <BiSolidShow />
+          </a>
+        )}
       </Buttons>
     </ProjectCard>
   );

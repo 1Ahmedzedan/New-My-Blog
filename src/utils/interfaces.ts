@@ -9,10 +9,18 @@ export interface SkillCategory {
 }
 
 export interface Skills {
-//   [key: string]: SkillCategory;
+  //   [key: string]: SkillCategory;
   programmingLanguage: SkillCategory;
   tools: SkillCategory;
   Miscellaneous: SkillCategory;
   FrameWorks: SkillCategory;
   operatingSystems: SkillCategory;
 }
+
+export interface Project {
+  title: string;
+  description: string;
+  repoLink?: string;
+  demoLink?: string;
+}
+
