@@ -22,5 +22,16 @@ export interface Project {
   description: string;
   repoLink?: string;
   demoLink?: string;
+  image?: string;
+  tools?: string[];
 }
 
+export interface Icons {
+  html: string;
+  css: string;
+  js: string;
+  react: string;
+  tailwind: string;
+  nodejs: string;
+  typescript: string;
+}

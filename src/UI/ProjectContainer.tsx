@@ -10,7 +10,7 @@ const ProjectContainer = styled.div`
 
   &:hover {
     & > div {
-      opacity: 0.5;
+      /* opacity: 0.5; */
       transform: scale(0.9);
     }
   }

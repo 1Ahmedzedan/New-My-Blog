@@ -6,7 +6,7 @@ import { useLocalStorageState } from "../hooks/useLocalStorageState";
 const Container = styled.div`
   position: fixed;
   top: 50px;
-  left: 50px;
+  left: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,13 +68,6 @@ const NavBar = () => {
           onClick={() => setActiveLink("projects")}
         >
           <span>Projects</span>
-        </Link>
-        <Link
-          active={activeLink === "awards"}
-          href="#awards"
-          onClick={() => setActiveLink("awards")}
-        >
-          <span>Awards</span>
         </Link>
         <Link
           active={activeLink === "contact"}

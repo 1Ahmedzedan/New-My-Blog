@@ -1,10 +1,13 @@
-import styled from "styled-components";
+import SectionContainer from "../UI/SectionContainer";
+import SectionHead from "../UI/SectionHead";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
-  const Container = styled.div`
-    background: red;
-    color: white;
-  `;
-  return <Container id="contact">Contact</Container>;
+  return (
+    <SectionContainer id="contact">
+      <SectionHead>Contact</SectionHead>
+      <ContactForm />
+    </SectionContainer>
+  );
 };
 export default Contact;
