@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ContactContainer = styled.div`
+const ContentContainer = styled.div`
   width: 80%;
   height: fit-content;
 
@@ -9,4 +9,4 @@ const ContactContainer = styled.div`
   gap: 150px;
 `;
 
-export default ContactContainer;
+export default ContentContainer;

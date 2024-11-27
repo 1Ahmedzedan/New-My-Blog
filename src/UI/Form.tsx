@@ -4,7 +4,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 40%;
+  width: 80%;
 
   & > input,
   textarea {
