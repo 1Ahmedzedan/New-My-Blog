@@ -9,12 +9,16 @@ import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ContentContainer from "./UI/ContactContainer";
+import UpToTopButton from "./UI/UpToTopButton";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 function App() {
   const Container = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
   `;
+
   return (
     <Container>
       <AppLayout>
@@ -22,6 +26,7 @@ function App() {
 
         <ContentContainer>
           <Intro />
+          <AboutMe />
           <Skills />
           <Projects />
           <Contact />
@@ -29,6 +34,7 @@ function App() {
       </AppLayout>
       <Footer />
       <ToastContainer />
+      <UpToTopButton />
     </Container>
   );
 }

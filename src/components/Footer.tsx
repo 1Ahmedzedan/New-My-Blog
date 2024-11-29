@@ -35,7 +35,6 @@ const Footer = () => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 
     gap: 10px;
 

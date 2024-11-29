@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import Link from "../UI/Link";
-import { useLocalStorageState } from "../hooks/useLocalStorageState";
+// import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
 // Move styled components outside the NavBar function
 const Container = styled.div`
   position: fixed;
-  top: 50px;
+  top: 20px;
   left: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 `;
 
 const Name = styled.p`
@@ -42,37 +42,47 @@ const NavBarContainer = styled.div`
 `;
 
 const NavBar = () => {
-  const [activeLink, setActiveLink] = useLocalStorageState("activeLink", "intro");
+  // const [activeLink, setActiveLink] = useLocalStorageState(
+  //   "activeLink",
+  //   "intro"
+  // );
 
   return (
     <Container>
       <Name>Ahmed Zedan</Name>
       <NavBarContainer>
         <Link
-          active={activeLink === "intro"}
+          // active={activeLink === "intro"}
           href="#intro"
-          onClick={() => setActiveLink("intro")}
+          // onClick={() => setActiveLink("intro")}
         >
           <span>Intro</span>
         </Link>
         <Link
-          active={activeLink === "skills"}
+          // active={activeLink === "intro"}
+          href="#aboutMe"
+          // onClick={() => setActiveLink("intro")}
+        >
+          <span>About Me</span>
+        </Link>
+        <Link
+          // active={activeLink === "skills"}
           href="#skills"
-          onClick={() => setActiveLink("skills")}
+          // onClick={() => setActiveLink("skills")}
         >
           <span>Skills</span>
         </Link>
         <Link
-          active={activeLink === "projects"}
+          // active={activeLink === "projects"}
           href="#projects"
-          onClick={() => setActiveLink("projects")}
+          // onClick={() => setActiveLink("projects")}
         >
           <span>Projects</span>
         </Link>
         <Link
-          active={activeLink === "contact"}
+          // active={activeLink === "contact"}
           href="#contact"
-          onClick={() => setActiveLink("contact")}
+          // onClick={() => setActiveLink("contact")}
         >
           <span>Contact Me</span>
         </Link>
