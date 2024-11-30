@@ -100,7 +100,7 @@ const Education = () => {
           <li>
             Achieved an <span>'Excellent'</span> grade for the Graduation
             Project -{" "}
-            <a href="https://github.com/1Ahmedzedan/Cloud-Tracker-Frontend">
+            <a target="_blank" href="https://github.com/1Ahmedzedan/Cloud-Tracker-Frontend">
               Cloud Tracker
             </a>
           </li>

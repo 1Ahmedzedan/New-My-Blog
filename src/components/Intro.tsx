@@ -7,6 +7,7 @@ import Gmail from "../assets/GmailLogo.png";
 import WhatsApp from "../assets/whatsAppIcon.png";
 import Github from "../assets/githubIcons.png";
 import Facebook from "../assets/facebookIcon.png";
+import { FaFileDownload } from "react-icons/fa";
 
 const Intro = () => {
   const Container = styled.div`
@@ -52,27 +53,50 @@ const Intro = () => {
   `;
 
   const SocialMedia = styled.div`
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    gap: 40px;
-
     align-self: center;
 
-    & > a {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    & > div .icon {
       width: fit-content;
       transition: all 300ms linear;
     }
 
-    & > a:hover {
+    & > div .icon:hover {
       scale: 130%;
       opacity: 0.5;
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      gap: 40px;
     }
   `;
 
   const SocialIcon = styled.img`
     width: 60px;
     height: 60px;
+  `;
+
+  const DownloadBtn = styled.a`
+    background-color: #2db872;
+    transition: all 500ms linear;
+    color: white;
+    width: fit-content;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 25px;
+    &:hover {
+      background-color: #07f980;
+    }
   `;
 
   return (
@@ -110,27 +134,50 @@ const Intro = () => {
           </Text>
         </div>
         <SocialMedia>
-          <a
+          <div>
+            <a
+              className="icon"
+              target="_blank"
+              href="https://www.linkedin.com/in/ahmed-zedan-04589624a/"
+            >
+              <SocialIcon src={Linkedin} alt="linkedin" />
+            </a>
+            <a
+              className="icon"
+              target="_blank"
+              href="mailto:a7mdzedan199@gmail.com"
+            >
+              <SocialIcon src={Gmail} alt="gmail" />
+            </a>
+            <a
+              className="icon"
+              target="_blank"
+              href="https://wa.me/01556188801"
+            >
+              <SocialIcon src={WhatsApp} alt="whatsApp" />
+            </a>
+            <a
+              className="icon"
+              target="_blank"
+              href="https://github.com/1Ahmedzedan"
+            >
+              <SocialIcon src={Github} alt="github" />
+            </a>
+            <a
+              className="icon"
+              target="_blank"
+              href="https://www.facebook.com/profile.php?id=100013486804562"
+            >
+              <SocialIcon src={Facebook} alt="facebook" />
+            </a>
+          </div>
+          <DownloadBtn
             target="_blank"
-            href="https://www.linkedin.com/in/ahmed-zedan-04589624a/"
+            href="https://drive.google.com/file/d/1C9sWRKXcImokfAd7QsRx0fQtu12kGwY6/view?usp=sharing"
           >
-            <SocialIcon src={Linkedin} alt="linkedin" />
-          </a>
-          <a target="_blank" href="mailto:a7mdzedan199@gmail.com">
-            <SocialIcon src={Gmail} alt="gmail" />
-          </a>
-          <a target="_blank" href="https://wa.me/01556188801">
-            <SocialIcon src={WhatsApp} alt="whatsApp" />
-          </a>
-          <a target="_blank" href="https://github.com/1Ahmedzedan">
-            <SocialIcon src={Github} alt="github" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.facebook.com/profile.php?id=100013486804562"
-          >
-            <SocialIcon src={Facebook} alt="facebook" />
-          </a>
+            Download Resume
+            <FaFileDownload />
+          </DownloadBtn>
         </SocialMedia>
       </Content>
     </Container>
