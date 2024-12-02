@@ -7,6 +7,14 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 150px;
+
+  @media (max-width: 1400px) {
+    width: 70%;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 export default ContentContainer;

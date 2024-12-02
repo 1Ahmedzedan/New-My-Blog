@@ -31,6 +31,12 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     display: flex;
     justify-content: flex-end;
 
+    @media (max-width: 900px) {
+      justify-content: flex-start;
+      padding: 30px;
+      flex-direction: column;
+    }
+
     & > img {
       position: fixed;
       animation: ${rotate} 8s linear 0s infinite alternate both;

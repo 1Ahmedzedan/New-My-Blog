@@ -29,7 +29,7 @@ const UpToTopButton = () => {
     width: fit-content;
     bottom: 10px;
     right: 10px;
-    z-index: 100;
+    z-index: 50;
     font-size: 26px;
     padding: 5px;
     border-radius: 50%;

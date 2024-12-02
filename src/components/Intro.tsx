@@ -15,6 +15,13 @@ const Intro = () => {
     position: relative;
     display: flex;
     gap: 60px;
+
+    @media (max-width: 1300px) {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
   `;
 
   const ImageContainer = styled.div`

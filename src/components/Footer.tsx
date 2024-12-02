@@ -17,14 +17,27 @@ interface SocialIConProps {
 const Footer = () => {
   const Container = styled.div`
     background: #1b2b2b;
-    padding: 50px 150px;
+    padding: 50px 50px;
     color: white;
     width: 100%;
     z-index: 2;
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     border-top: #51ffa9 solid 2px;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+
+      gap: 40px;
+
+      & > div {
+        width: 100% !important;
+        align-items: center;
+      }
+    }
 
     & > div {
       width: 22%;
@@ -35,7 +48,6 @@ const Footer = () => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     gap: 10px;
 
     & > .name {
@@ -52,6 +64,10 @@ const Footer = () => {
     & > .expersion {
       color: #51ffa9;
       text-align: start;
+
+      @media (max-width: 1200px) {
+        text-align: center;
+      }
 
       & > span {
         color: white;
@@ -82,6 +98,11 @@ const Footer = () => {
     flex-direction: column;
     justify-content: space-between;
 
+    @media (max-width: 1200px) {
+      width: 100%;
+      gap: 20px;
+    }
+
     & > a {
       display: flex;
       align-items: center;
@@ -90,6 +111,10 @@ const Footer = () => {
       border-bottom: gray solid 1px;
       padding-bottom: 10px;
       transition: all 200ms linear;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
 
       & > svg {
         color: #51ffa9;
@@ -107,6 +132,10 @@ const Footer = () => {
     flex-direction: column;
     justify-content: center;
     gap: 40px;
+
+    @media (max-width: 1200px) {
+      gap: 20px;
+    }
     & > .location,
     .phones {
       display: flex;
@@ -114,15 +143,27 @@ const Footer = () => {
       gap: 20px;
       font-size: 20px;
 
+      @media (max-width: 1200px) {
+        flex-direction: column;
+        gap: 5px;
+      }
+
       & > svg {
         font-size: 28px;
         color: #51ffa9;
       }
     }
-
-    & > .phones {
-    }
   `;
+
+  const Image = styled.img `
+    width: 20%;
+    height: 100%;
+
+    @media (max-width: 1200px) {
+      width: 50%;
+      
+    }
+  ` ; 
   return (
     <Container id="contact">
       <Container1>
@@ -194,10 +235,9 @@ const Footer = () => {
         </div>
       </Container3>
 
-      <img
+      <Image
         src={Img}
         alt="img"
-        style={{ width: "25%", height: "100%" }}
         draggable={false}
       />
     </Container>

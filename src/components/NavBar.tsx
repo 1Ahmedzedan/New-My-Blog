@@ -1,8 +1,14 @@
 import styled from "styled-components";
 import Link from "../UI/Link";
+import { HiViewList } from "react-icons/hi";
+import { useState } from "react";
+import { IoCloseSharp } from "react-icons/io5";
 // import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
-// Move styled components outside the NavBar function
+interface NavBarProps {
+  show: boolean;
+}
+
 const Container = styled.div`
   position: fixed;
   top: 20px;
@@ -11,6 +17,10 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+
+  @media (max-width: 900px) {
+    position: relative;
+  }
 `;
 
 const Name = styled.p`
@@ -20,9 +30,35 @@ const Name = styled.p`
   font-family: "Dela Gothic One", sans-serif;
   letter-spacing: 2px;
   word-spacing: 5px;
+
+  @media (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+  }
+
+  & > .listBtn {
+    font-size: 30px;
+    background-color: #1b2b2b;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    border: #51ffa9 solid 2px;
+    display: none;
+
+    &:hover {
+      box-shadow: 0 0 5px 0.5px white;
+    }
+
+    @media (max-width: 900px) {
+      display: block;
+    }
+  }
 `;
 
-const NavBarContainer = styled.div`
+const NavBarContainer = styled.div<NavBarProps>`
   background: linear-gradient(
     180deg,
     #1b2d2cac 0%,
@@ -39,6 +75,18 @@ const NavBarContainer = styled.div`
   font-size: 18px;
   color: #ffffff;
   border-radius: 25px;
+
+  @media (max-width: 900px) {
+    display: ${(props) => (props.show ? "block" : "none")};
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    background: #1b2b2b;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+  }
 `;
 
 const NavBar = () => {
@@ -47,10 +95,20 @@ const NavBar = () => {
   //   "intro"
   // );
 
+  const [showNav, setShowNav] = useState<boolean>(false);
+
   return (
     <Container>
-      <Name>Ahmed Zedan</Name>
-      <NavBarContainer>
+      <Name>
+        <button onClick={() => setShowNav(true)} className="listBtn">
+          <HiViewList />
+        </button>
+        Ahmed Zedan
+      </Name>
+      <NavBarContainer show={showNav}>
+        <button className="close">
+          <IoCloseSharp />
+        </button>
         <Link
           // active={activeLink === "intro"}
           href="#intro"

@@ -1,7 +1,7 @@
 import { BiSolidShow } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import styled, { keyframes } from "styled-components";
-import ProjectImg from "../assets/projectImg.jpg";
+// import ProjectImg from "../assets/projectImg.jpg";
 import { icons } from "../utils/data";
 import { Icons } from "../utils/interfaces";
 
