@@ -1,4 +1,8 @@
 import { Icons, Project, Skills } from "./interfaces";
+import CloudTracker from "../assets/cloudTracker.png" ;
+import Talk from "../assets/Talk.jpeg" ;
+import EC2 from "../assets/EC2.png" ; 
+import MazeGame from "../assets/mazeGame.png"
 
 export const icons: Icons = {
   html: "../src/assets/htmlIcon.png",
@@ -176,7 +180,7 @@ export const projects: Project[] = [
     description:
       "Awebappto track & visualize AWS resource usage, obtaining data by assuming IAM Roles and other methods.",
     repoLink: "https://github.com/1Ahmedzedan/Cloud-Tracker-Frontend",
-    image: "../src/assets/cloudTracker.png",
+    image: CloudTracker,
     tools: ["react", "typescript", "tailwind"],
   },
   {
@@ -185,7 +189,7 @@ export const projects: Project[] = [
       "React application to explore and compare pricing for AWS Cloud EC2 compute instances and  Real time and interactive visualization with rich filtration options.",
     repoLink: "https://github.com/1Ahmedzedan/aws-instances-ec2",
     demoLink: "https://1ahmedzedan.github.io/aws-instances-ec2/",
-    image: "../src/assets/EC2.png",
+    image: EC2,
     tools: ["react", "css"],
   },
   {
@@ -194,7 +198,7 @@ export const projects: Project[] = [
       "Talk App is a real-time messaging application that allows users to communicate with each other instantly.It is built using Socket.IO for server-side communication, Node.js and Express for the backend, React.js with TypeScript for the frontend.",
     repoLink: "https://github.com/1Ahmedzedan/Talk-App",
     demoLink: "https://chat-app-dvqz.onrender.com/",
-    image: "../src/assets/Talk.jpeg",
+    image: Talk,
     tools: ["react", "typescript", "tailwind", "nodejs"],
   },
   {
@@ -203,7 +207,7 @@ export const projects: Project[] = [
       "This project is a maze game built using React.js. It utilizes a backtracking algorithm to generate the maze and depth-first search (DFS) algorithm to find the end of the maze. ",
     repoLink: "https://github.com/1Ahmedzedan/MAZE-GAME",
     demoLink: "https://1ahmedzedan.github.io/MAZE-GAME/",
-    image: "../src/assets/mazeGame.png",
+    image: MazeGame,
     tools: ["react", "tailwind"],
   },
 ];
