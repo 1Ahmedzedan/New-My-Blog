@@ -133,7 +133,6 @@ const ProjectCard = ({
     align-items: center;
     gap: 10px;
 
-
     & > img {
       width: 28px;
       height: 28px;
@@ -149,12 +148,22 @@ const ProjectCard = ({
         />
         <div className="overlay">
           {repoLink && (
-            <a href={repoLink} target="_blank" className="btn">
+            <a
+              href={repoLink}
+              target="_blank"
+              className="btn"
+              draggable="false"
+            >
               <FaGithub />
             </a>
           )}
           {demoLink && (
-            <a href={demoLink} target="_blank" className="btn">
+            <a
+              href={demoLink}
+              target="_blank"
+              className="btn"
+              draggable="false"
+            >
               <BiSolidShow />
             </a>
           )}
@@ -168,7 +177,7 @@ const ProjectCard = ({
 
       <Tools>
         {tools?.map((tool: string) => (
-          <img src={icons[tool as keyof Icons]} alt="tool" />
+          <img src={icons[tool as keyof Icons]} alt="tool" draggable="false" />
         ))}
       </Tools>
     </ProjectCard>

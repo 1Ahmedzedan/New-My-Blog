@@ -54,6 +54,10 @@ const Intro = () => {
     align-items: center;
     gap: 20px;
 
+    @media (max-width: 900px) {
+      font-size: 18px;
+    }
+
     & > svg {
       color: #51ffa9;
     }
@@ -82,6 +86,10 @@ const Intro = () => {
       align-items: center;
       justify-items: center;
       gap: 40px;
+
+      @media (max-width: 900px) {
+        gap: 20px;
+      }
     }
   `;
 
@@ -109,7 +117,7 @@ const Intro = () => {
   return (
     <Container id="intro">
       <ImageContainer>
-        <MyImage src={myPhoto} alt="myPhoto" />
+        <MyImage src={myPhoto} alt="myPhoto" draggable="false" />
       </ImageContainer>
       <Content>
         <div>
@@ -146,41 +154,47 @@ const Intro = () => {
               className="icon"
               target="_blank"
               href="https://www.linkedin.com/in/ahmed-zedan-04589624a/"
+              draggable="false"
             >
-              <SocialIcon src={Linkedin} alt="linkedin" />
+              <SocialIcon src={Linkedin} alt="linkedin" draggable="false" />
             </a>
             <a
               className="icon"
               target="_blank"
               href="mailto:a7mdzedan199@gmail.com"
+              draggable="false"
             >
-              <SocialIcon src={Gmail} alt="gmail" />
+              <SocialIcon src={Gmail} alt="gmail" draggable="false" />
             </a>
             <a
               className="icon"
               target="_blank"
               href="https://wa.me/01556188801"
+              draggable="false"
             >
-              <SocialIcon src={WhatsApp} alt="whatsApp" />
+              <SocialIcon src={WhatsApp} alt="whatsApp" draggable="false" />
             </a>
             <a
               className="icon"
               target="_blank"
               href="https://github.com/1Ahmedzedan"
+              draggable="false"
             >
-              <SocialIcon src={Github} alt="github" />
+              <SocialIcon src={Github} alt="github" draggable="false" />
             </a>
             <a
               className="icon"
               target="_blank"
               href="https://www.facebook.com/profile.php?id=100013486804562"
+              draggable="false"
             >
-              <SocialIcon src={Facebook} alt="facebook" />
+              <SocialIcon src={Facebook} alt="facebook" draggable="false" />
             </a>
           </div>
           <DownloadBtn
             target="_blank"
             href="https://drive.google.com/file/d/1C9sWRKXcImokfAd7QsRx0fQtu12kGwY6/view?usp=sharing"
+            draggable="false"
           >
             Download Resume
             <FaFileDownload />

@@ -6,6 +6,10 @@ const Form = styled.form`
   gap: 15px;
   width: 80%;
 
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
   & > input,
   textarea {
     width: 100%;

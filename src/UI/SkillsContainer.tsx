@@ -37,6 +37,10 @@ const SkillsContainer = ({ title }: ComponentProps) => {
     align-items: center;
     gap: 20px;
 
+    @media (max-width: 900px) {
+      font-size: 18px;
+    }
+
     & > svg {
       color: #51ffa9;
     }

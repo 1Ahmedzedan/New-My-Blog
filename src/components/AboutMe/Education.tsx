@@ -30,6 +30,10 @@ const Education = () => {
     align-items: center;
     gap: 20px;
 
+    @media (max-width: 900px) {
+      font-size: 20px;
+    }
+
     & > svg {
       color: #51ffa9;
     }
@@ -43,11 +47,21 @@ const Education = () => {
       font-size: 26px;
       color: #51ffa9;
       font-weight: bold;
+
+      @media (max-width: 900px) {
+        font-size: 20px;
+      }
     }
 
     & > .subTitle {
       display: flex;
       gap: 60px;
+
+      @media (max-width: 900px) {
+        font-size: 16px;
+        flex-direction: column;
+        gap: 0;
+      }
 
       & > .major {
         font-weight: bold;
@@ -55,6 +69,10 @@ const Education = () => {
 
       & > .dates {
         color: #51ffa9;
+
+        @media (max-width: 900px) {
+          align-self: flex-end;
+        }
       }
     }
   `;
@@ -67,13 +85,14 @@ const Education = () => {
       p span {
         color: #51ffa9;
         font-weight: bold;
+        font-size: 16px;
       }
 
       & > a {
         color: #51ffa9;
         transition: all 300ms linear;
-        &:hover{
-            color: white;
+        &:hover {
+          color: white;
         }
       }
     }
@@ -100,7 +119,10 @@ const Education = () => {
           <li>
             Achieved an <span>'Excellent'</span> grade for the Graduation
             Project -{" "}
-            <a target="_blank" href="https://github.com/1Ahmedzedan/Cloud-Tracker-Frontend">
+            <a
+              target="_blank"
+              href="https://github.com/1Ahmedzedan/Cloud-Tracker-Frontend"
+            >
               Cloud Tracker
             </a>
           </li>

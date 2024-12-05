@@ -48,6 +48,9 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(2) {
       top: 10%;
       left: 15%;
+      @media (max-width: 900px) {
+        top: 20%;
+      }
     }
     & > img:nth-child(3) {
       top: 5%;
@@ -56,6 +59,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(4) {
       top: 10%;
       left: 45%;
+
+      @media (max-width: 900px) {
+        top: 20%;
+      }
     }
     & > img:nth-child(5) {
       top: 5%;
@@ -64,6 +71,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(6) {
       top: 10%;
       left: 75%;
+
+      @media (max-width: 900px) {
+        top: 20%;
+      }
     }
     & > img:nth-child(7) {
       top: 5%;
@@ -77,6 +88,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(9) {
       top: 45%;
       left: 15%;
+
+      @media (max-width: 900px) {
+        top: 55%;
+      }
     }
     & > img:nth-child(10) {
       top: 40%;
@@ -85,6 +100,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(11) {
       top: 45%;
       left: 45%;
+
+      @media (max-width: 900px) {
+        top: 55%;
+      }
     }
     & > img:nth-child(12) {
       top: 40%;
@@ -93,6 +112,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(13) {
       top: 45%;
       left: 75%;
+
+      @media (max-width: 900px) {
+        top: 55%;
+      }
     }
     & > img:nth-child(14) {
       top: 40%;
@@ -102,6 +125,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(15) {
       top: 80%;
       left: 5%;
+
+      @media (max-width: 900px) {
+        top: 75%;
+      }
     }
     & > img:nth-child(16) {
       top: 85%;
@@ -110,6 +137,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(17) {
       top: 80%;
       left: 30%;
+
+      @media (max-width: 900px) {
+        top: 75%;
+      }
     }
     & > img:nth-child(18) {
       top: 85%;
@@ -118,6 +149,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(19) {
       top: 80%;
       left: 60%;
+
+      @media (max-width: 900px) {
+        top: 75%;
+      }
     }
     & > img:nth-child(20) {
       top: 85%;
@@ -126,6 +161,10 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     & > img:nth-child(21) {
       top: 80%;
       left: 90%;
+
+      @media (max-width: 900px) {
+        top: 75%;
+      }
     }
   `;
 
@@ -134,27 +173,27 @@ const AppLayout: React.FC<Props> = ({ children }) => {
   `;
   return (
     <Container>
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
-      <Image src={element2} alt="icon" />
-      <Image src={element1} alt="icon" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
+      <Image src={element2} alt="icon" draggable="false" />
+      <Image src={element1} alt="icon" draggable="false" />
       {children}
     </Container>
   );

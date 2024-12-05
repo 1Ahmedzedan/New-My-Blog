@@ -16,11 +16,21 @@ const Contact = () => {
     display: flex;
     justify-content: center;
     gap: 40px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
   `;
   const SocialMediaIcons = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width: 600px) {
+      flex-direction: row;
+      gap: 0;
+      justify-content: space-between;
+    }
 
     & > a {
       background-color: #2db872;
@@ -29,6 +39,11 @@ const Contact = () => {
       border-radius: 10px;
       transition: all 500ms linear;
       color: white;
+
+      @media (max-width: 450px) {
+        font-size: 30px;
+        padding: 5px;
+      }
 
       &:hover {
         background-color: #07f980;
@@ -46,16 +61,10 @@ const Contact = () => {
           >
             <FaFacebookF />
           </a>
-          <a
-            target="_blank"
-            href="https://www.instagram.com/ahmed_zedan111/"
-          >
+          <a target="_blank" href="https://www.instagram.com/ahmed_zedan111/">
             <FaInstagram />
           </a>
-          <a
-            target="_blank"
-            href="https://wa.me/01556188801"
-          >
+          <a target="_blank" href="https://wa.me/01556188801">
             <FaWhatsapp />
           </a>
           <a
@@ -64,10 +73,7 @@ const Contact = () => {
           >
             <FaLinkedinIn />
           </a>
-          <a
-            target="_blank"
-            href="https://github.com/1Ahmedzedan"
-          >
+          <a target="_blank" href="https://github.com/1Ahmedzedan">
             <FaGithub />
           </a>
         </SocialMediaIcons>

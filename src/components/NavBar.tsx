@@ -21,6 +21,10 @@ const Container = styled.div`
   @media (max-width: 900px) {
     position: relative;
   }
+
+  @media (max-width: 600px) {
+    left: 5px;
+  }
 `;
 
 const Name = styled.p`
@@ -40,10 +44,10 @@ const Name = styled.p`
   }
 
   & > .listBtn {
-    font-size: 30px;
+    font-size: 20px;
     background-color: #1b2b2b;
     color: white;
-    padding: 8px;
+    padding: 5px;
     border-radius: 10px;
     border: #51ffa9 solid 2px;
     display: none;
@@ -77,7 +81,7 @@ const NavBarContainer = styled.div<NavBarProps>`
   border-radius: 25px;
 
   @media (max-width: 900px) {
-    display: ${(props) => (props.show ? "block" : "none")};
+    display: ${(props) => (props.show ? "flex" : "none")};
     position: fixed;
     top: 0;
     left: 0;
@@ -85,7 +89,22 @@ const NavBarContainer = styled.div<NavBarProps>`
     background: #1b2b2b;
     z-index: 100;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
+    justify-content: flex-start;
+    padding: 50px;
+
+    & > .close {
+      display: block !important;
+      align-self: flex-end;
+      padding: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+  }
+
+  & > .close {
+    display: none;
   }
 `;
 
@@ -106,41 +125,41 @@ const NavBar = () => {
         Ahmed Zedan
       </Name>
       <NavBarContainer show={showNav}>
-        <button className="close">
+        <button onClick={() => setShowNav(false)} className="close">
           <IoCloseSharp />
         </button>
         <Link
           // active={activeLink === "intro"}
           href="#intro"
-          // onClick={() => setActiveLink("intro")}
+          onClick={() => setShowNav(false)}
         >
           <span>Intro</span>
         </Link>
         <Link
           // active={activeLink === "intro"}
           href="#aboutMe"
-          // onClick={() => setActiveLink("intro")}
+          onClick={() => setShowNav(false)}
         >
           <span>About Me</span>
         </Link>
         <Link
           // active={activeLink === "skills"}
           href="#skills"
-          // onClick={() => setActiveLink("skills")}
+          onClick={() => setShowNav(false)}
         >
           <span>Skills</span>
         </Link>
         <Link
           // active={activeLink === "projects"}
           href="#projects"
-          // onClick={() => setActiveLink("projects")}
+          onClick={() => setShowNav(false)}
         >
           <span>Projects</span>
         </Link>
         <Link
           // active={activeLink === "contact"}
           href="#contact"
-          // onClick={() => setActiveLink("contact")}
+          onClick={() => setShowNav(false)}
         >
           <span>Contact Me</span>
         </Link>

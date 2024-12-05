@@ -80,6 +80,10 @@ const AnimateCursorText = styled.p<AnimationTextProps>`
   width: 0%;
   /* border-right: 2px solid white; */
 
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
+
   animation: ${(props) => (props.cursor ? typingWithCursor : typing)}
       ${(props) => props.duration}s steps(10) ${(props) => props.delay}s
       forwards,

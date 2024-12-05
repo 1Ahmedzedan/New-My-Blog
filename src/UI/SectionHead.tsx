@@ -8,6 +8,10 @@ const SectionHead = styled.p`
   border-bottom: #51ffa9 solid 5px;
   width: fit-content;
   padding: 0 40px;
+
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
 `;
 
 export default SectionHead;

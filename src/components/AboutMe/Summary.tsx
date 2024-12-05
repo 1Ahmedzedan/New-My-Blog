@@ -30,6 +30,10 @@ const Summary = () => {
     align-items: center;
     gap: 20px;
 
+    @media (max-width: 900px) {
+      font-size: 20px;
+    }
+
     & > svg {
       color: #51ffa9;
     }
@@ -38,6 +42,10 @@ const Summary = () => {
   const Content = styled.div`
     font-size: 18px;
     padding-left: 36px;
+
+    @media (max-width: 900px) {
+      font-size: 16px;
+    }
   `;
   return (
     <Container>

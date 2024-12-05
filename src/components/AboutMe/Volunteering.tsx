@@ -30,6 +30,10 @@ const Volunteering = () => {
     align-items: center;
     gap: 20px;
 
+    @media (max-width: 900px) {
+      font-size: 20px;
+    }
+
     & > svg {
       color: #51ffa9;
     }
@@ -47,10 +51,18 @@ const Volunteering = () => {
       align-items: center;
       gap: 20px;
 
+      @media (max-width: 900px) {
+        font-size: 20px;
+      }
+
       & > span {
         color: white;
         font-size: 20px;
         font-weight: 300;
+
+        @media (max-width: 900px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -58,12 +70,21 @@ const Volunteering = () => {
       display: flex;
       gap: 60px;
 
+      @media (max-width: 900px) {
+        font-size: 16px;
+        flex-direction: column;
+        gap: 0;
+      }
+
       & > .major {
         font-weight: bold;
       }
 
       & > .dates {
         color: #51ffa9;
+        @media (max-width: 900px) {
+          align-self: flex-end;
+        }
       }
     }
   `;

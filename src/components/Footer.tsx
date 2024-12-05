@@ -54,6 +54,10 @@ const Footer = () => {
       font-size: 32px;
       font-weight: bold;
       letter-spacing: 3px;
+
+      @media (max-width: 450px) {
+        font-size: 24px;
+      }
     }
 
     & > .socialIcons {
@@ -160,8 +164,12 @@ const Footer = () => {
     height: 100%;
 
     @media (max-width: 1200px) {
-      width: 50%;
+      width: 60%;
       
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
     }
   ` ; 
   return (
