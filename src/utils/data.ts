@@ -1,17 +1,24 @@
 import { Icons, Project, Skills } from "./interfaces";
-import CloudTracker from "../assets/cloudTracker.png" ;
-import Talk from "../assets/Talk.jpeg" ;
-import EC2 from "../assets/EC2.png" ; 
-import MazeGame from "../assets/mazeGame.png"
+import CloudTracker from "../assets/cloudTracker.png";
+import Talk from "../assets/Talk.jpeg";
+import EC2 from "../assets/EC2.png";
+import MazeGame from "../assets/mazeGame.png";
+import htmlIcon from "../assets/htmlIcon.png";
+import cssIcon from "../assets/cssIcon.png";
+import jsIcon from "../assets/jsIcon.png";
+import reactIcon from "../assets/reactIcon.png";
+import tailwindIcon from "../assets/tailwindIcon.png";
+import nodejsIcon from "../assets/nodejsIcon.png";
+import typescriptIcon from "../assets/typescriptIcon.png";
 
 export const icons: Icons = {
-  html: "../src/assets/htmlIcon.png",
-  css: "../src/assets/cssIcon.png",
-  js: "../src/assets/jsIcon.png",
-  react: "../src/assets/reactIcon.png",
-  tailwind: "../src/assets/tailwindIcon.png",
-  nodejs: "../src/assets/nodejsIcon.png",
-  typescript: "../src/assets/typescriptIcon.png",
+  html: htmlIcon,
+  css: cssIcon,
+  js: jsIcon,
+  react: reactIcon,
+  tailwind: tailwindIcon,
+  nodejs: nodejsIcon,
+  typescript: typescriptIcon,
 };
 
 export const skills: Skills = {
